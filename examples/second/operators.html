@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Operators</title>
+    <script src="main.js"></script>
+</head>
+<body>
+<div id="header"></div>
+<div id="main">
+    <h1>JavaScript Операторы</h1>
+    <div>
+        <p><strong>Оператор</strong> — это элемент языка, задающий полное описание действия, которое необходимо
+            выполнить. Каждый оператор представляет собой законченную фразу языка программирования и определяет
+            некоторый вполне законченный этап обработки данных.</p>
+        <p>Многие языки (например, Си-подобные) различают <strong>инструкцию</strong> и <strong>определение</strong>.
+            Различие в том, что инструкция исполняет код, а определение создаёт идентификатор (то есть можно
+            рассматривать определение как инструкцию присваивания).</p>
+    </div>
+    <hr>
+    <div>
+        <h3>Пример</h3>
+        <p>Присвойте значения к переменным и сложите их вместе:</p>
+        <div><span style="color:black">
+<span style="color:mediumblue">var</span> x = <span
+                style="color:red">5</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color:green">// присвойте значение 5 к x<br></span>
+<span style="color:mediumblue">var</span> y = <span
+                style="color:red">2</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color:green">// присвоить значение 2 к y<br></span>
+<span style="color:mediumblue">var</span> z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color:green">// присвоить значение 7 к z (5 + 2)
+ </span></span></div>
+    </div>
+    <p>Оператор <strong>присваивания</strong> (<code>=</code>) присваивает значение к переменной.
+    </p>
+    <div>
+        <h3>Присвоение</h3>
+        <div><span style="color:black">
+<span style="color:mediumblue">var</span> x = <span
+                style="color:red">10</span>; </span></div>
+    </div>
+    <p>Оператор <strong>сложения</strong> (<code>+</code>) слаживает числа:</p>
+    <div>
+        <h3>Добавление</h3>
+        <div><span style="color:black">
+<span style="color:mediumblue">var</span> x = <span
+                style="color:red">5</span>;<br>
+<span style="color:mediumblue">var</span> y = <span
+                style="color:red">2</span>;<br><span
+                style="color:mediumblue">var</span> z = x + y;<span
+                style="color:red">
+</span> </span></div>
+    </div>
+    <p>Оператор <strong>умножения</strong> (<code>*</code>) умножает числа.</p>
+    <div>
+        <h3>Умножение</h3>
+        <div><span style="color:black">
+<span style="color:mediumblue">var</span> x = <span
+                style="color:red">5</span>;<br>
+<span style="color:mediumblue">var</span> y = <span
+                style="color:red">2</span>;<br><span
+                style="color:mediumblue">var</span> z = x * y;<span
+                style="color:red">
+</span> </span></div>
+    </div>
+    <hr>
+    <h2>JavaScript Арифметические операторы</h2>
+    <p>Арифметические операторы используются для выполнения арифметических действий с числами:</p>
+    <table>
+        <tbody>
+        <tr>
+            <th style="width:25%">Оператор</th>
+            <th>Описание</th>
+        </tr>
+        <tr>
+            <td>+</td>
+            <td>Сложение</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>Вычитание</td>
+        </tr>
+        <tr>
+            <td>*</td>
+            <td>Умножение</td>
+        </tr>
+        <tr>
+            <td>**</td>
+            <td>Возведение в степень (ES2016)</td>
+        </tr>
+        <tr>
+            <td>/</td>
+            <td>Деление</td>
+        </tr>
+        <tr>
+            <td>%</td>
+            <td>Модуль (Остаток деления)</td>
+        </tr>
+        <tr>
+            <td>++</td>
+            <td>Инкремент (увеличение на 1)</td>
+        </tr>
+        <tr>
+            <td>--</td>
+            <td>Декремент (уменьшение на 1)</td>
+        </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2>JavaScript Операторы присваивания</h2>
+    <p>Операторы присваивания присваивают значения к переменным JavaScript.</p>
+    <table>
+        <tbody>
+        <tr>
+            <th style="width:25%">Оператор</th>
+            <th>Пример</th>
+            <th>То же, самое</th>
+        </tr>
+        <tr>
+            <td>=</td>
+            <td>x = y</td>
+            <td>x = y</td>
+        </tr>
+        <tr>
+            <td>+=</td>
+            <td>x += y</td>
+            <td>x = x + y</td>
+        </tr>
+        <tr>
+            <td>-=</td>
+            <td>x -= y</td>
+            <td>x = x - y</td>
+        </tr>
+        <tr>
+            <td>*=</td>
+            <td>x *= y</td>
+            <td>x = x * y</td>
+        </tr>
+        <tr>
+            <td>/=</td>
+            <td>x /= y</td>
+            <td>x = x / y</td>
+        </tr>
+        <tr>
+            <td>%=</td>
+            <td>x %= y</td>
+            <td>x = x % y</td>
+        </tr>
+        <tr>
+            <td>**=</td>
+            <td>x **= y</td>
+            <td>x = x ** y</td>
+        </tr>
+        </tbody>
+    </table>
+    <p>Оператор <strong>присваивания сложения</strong> (<code>+=</code>), добавляет значение к
+        переменной.</p>
+    <div>
+        <h3>Присвоение</h3>
+        <div><span style="color:black">
+<span style="color:mediumblue">var</span> x = <span
+                style="color:red">10</span>;<br>x += <span
+                style="color:red">5</span>; </span></div>
+    </div>
+    <div>
+    </div>
+    <hr>
+    <h2>JavaScript Строковые операторы</h2>
+    <p>Оператор <code>+</code>, также может быть использован для добавления (конкатенации) строк.
+    </p>
+    <div>
+        <h3>Пример</h3>
+        <div><span style="color:black">
+<span style="color:mediumblue">var</span>
+txt1 = <span style="color:brown">"Щипунов"</span>;<br>
+<span style="color:mediumblue">var</span>
+txt2 = <span style="color:brown">"Андрей"</span>;<br>
+<span style="color:mediumblue">var</span>
+txt3 = txt1 + <span style="color:brown">" "</span> + txt2;<span
+                style="color:red">
+</span> </span></div>
+        <p>Результатом txt3 будет:</p>
+        <div>
+            <code>Щипунов Андрей</code></div>
+    </div>
+    <p>Оператор присваивания <code>+=</code>, также может использоваться для добавления
+        (объединения) строк:</p>
+    <div>
+        <h3>Пример</h3>
+        <div><span style="color:black">
+<span style="color:mediumblue">var</span>
+txt1 = <span style="color:brown">"Сегодня очень "</span>;<br>
+txt1 += <span style="color:brown">"хороший день"</span>; </span></div>
+        <p>Результатом txt1 будет:</p>
+        <div>
+            <code>Сегодня очень хороший день</code></div>
+
+    </div>
+    <div>
+        <p>При использовании со строками оператор + называется оператором конкатенации.</p>
+    </div>
+    <hr>
+    <h2>Добавление строк и чисел</h2>
+    <p>Добавление двух чисел вернет сумму, а добавление числа и строки вернет строку:</p>
+    <div>
+        <h3>Пример</h3>
+        <div><span style="color:black">
+<span style="color:mediumblue">var</span>
+x = <span style="color:red">5</span> + <span style="color:red">5</span>;<br>
+<span style="color:mediumblue">var</span>
+y = <span style="color:brown">"5"</span> + <span style="color:red">5</span>;<br>
+<span style="color:mediumblue">var</span>
+z = <span style="color:brown">"Привет"</span> + <span
+                style="color:red">5</span>;<br><span
+                style="color:red">
+</span> </span></div>
+        <p>Результат <em>x</em>,<em> y</em>, и <em>z</em> будет:</p>
+        <div>
+            <code>
+                10<br>
+                55<br>
+                Привет5
+            </code>
+        </div>
+
+    </div>
+    <div>
+        <p>Если вы сложите число и строку, результатом будет строка!</p>
+    </div>
+    <hr>
+    <h2>JavaScript Операторы сравнения</h2>
+    <table>
+        <tbody>
+        <tr>
+            <th style="width:12%">Оператор</th>
+            <th>Описание</th>
+        </tr>
+        <tr>
+            <td>==</td>
+            <td>равно</td>
+        </tr>
+        <tr>
+            <td>===</td>
+            <td>равное значение и равный тип</td>
+        </tr>
+        <tr>
+            <td>!=</td>
+            <td>не равно</td>
+        </tr>
+        <tr>
+            <td>!==</td>
+            <td>не равное значение или не равный тип</td>
+        </tr>
+        <tr>
+            <td>&gt;</td>
+            <td>больше, чем</td>
+        </tr>
+        <tr>
+            <td>&lt;</td>
+            <td>меньше, чем</td>
+        </tr>
+        <tr>
+            <td>&gt;=</td>
+            <td>больше или равно</td>
+        </tr>
+        <tr>
+            <td>&lt;=</td>
+            <td>меньше или равно</td>
+        </tr>
+        <tr>
+            <td>?</td>
+            <td>тернарный оператор</td>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+    </div>
+    <hr>
+    <h2>JavaScript Логические операторы</h2>
+    <table>
+        <tbody>
+        <tr>
+            <th style="width:12%">Оператор</th>
+            <th>Описание</th>
+        </tr>
+        <tr>
+            <td>&amp;&amp;</td>
+            <td>логический AND</td>
+        </tr>
+        <tr>
+            <td>||</td>
+            <td>логический OR</td>
+        </tr>
+        <tr>
+            <td>!</td>
+            <td>логический NOT</td>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+    </div>
+    <hr>
+    <h2>JavaScript Операторы типов</h2>
+    <table>
+        <tbody>
+        <tr>
+            <th style="width:30%">Оператор</th>
+            <th>Описание</th>
+        </tr>
+        <tr>
+            <td>typeof</td>
+            <td>Возвращает тип переменной</td>
+        </tr>
+        <tr>
+            <td>instanceof</td>
+            <td>Возвращает true, если объект является экземпляром типа объекта</td>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+    </div>
+    <hr>
+    <h2>JavaScript Побитовые операторы</h2>
+    <p>Битовые операторы работают с 32-битными числами.</p>
+    <p>Любой числовой операнд в операции преобразуется в 32-битное число. Результат конвертируется обратно в число
+        JavaScript.</p>
+    <div>
+        <table>
+            <tbody>
+            <tr>
+                <th style="width:12%">Оператор</th>
+                <th style="width:25%">Описание</th>
+                <th>Пример</th>
+                <th>То же, самое</th>
+                <th>Результат</th>
+                <th style="width:15%">Десятичные</th>
+            </tr>
+            <tr>
+                <td>&amp;</td>
+                <td>AND</td>
+                <td>5 &amp; 1</td>
+                <td>0101 &amp; 0001</td>
+                <td>0001</td>
+                <td>&nbsp;1</td>
+            </tr>
+            <tr>
+                <td>|</td>
+                <td>OR</td>
+                <td>5 | 1</td>
+                <td>0101 | 0001</td>
+                <td>0101</td>
+                <td>&nbsp;5</td>
+            </tr>
+            <tr>
+                <td>~</td>
+                <td>NOT</td>
+                <td>~ 5</td>
+                <td>&nbsp;~0101</td>
+                <td>1010</td>
+                <td>&nbsp;10</td>
+            </tr>
+            <tr>
+                <td>^</td>
+                <td>XOR</td>
+                <td>5 ^ 1</td>
+                <td>0101 ^ 0001</td>
+                <td>0100</td>
+                <td>&nbsp;4</td>
+            </tr>
+            <tr>
+                <td>&lt;&lt;</td>
+                <td>Нулевая заливка сдвиг влево</td>
+                <td>5 &lt;&lt; 1</td>
+                <td>0101 &lt;&lt; 1</td>
+                <td>1010</td>
+                <td>&nbsp;10</td>
+            </tr>
+            <tr>
+                <td>&gt;&gt;</td>
+                <td>Подписанный сдвиг вправо</td>
+                <td>5 &gt;&gt; 1</td>
+                <td>0101 &gt;&gt; 1</td>
+                <td>0010</td>
+                <td>&nbsp; 2</td>
+            </tr>
+            <tr>
+                <td>&gt;&gt;&gt;</td>
+                <td>Нулевая заливка сдвиг вправо</td>
+                <td>5 &gt;&gt;&gt; 1</td>
+                <td>0101 &gt;&gt;&gt; 1</td>
+                <td>0010</td>
+                <td>&nbsp; 2</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <p>В приведенных выше примерах используются 4-битные беззнаковые примеры. Но в JavaScript используются 32-битные
+            числа со знаком.<br>
+            Из-за этого в JavaScript ~ 5 не вернет 10. Он вернет -6.<br>~00000000000000000000000000000101 вернет
+            11111111111111111111111111111010</p>
+    </div>
+    <hr>
+
+</div>
+</body>
+</html>

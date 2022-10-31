@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Const</title>
+    <script src="main.js"></script>
+</head>
+<body>
+<div id="header"></div>
+<div id="main">
+    <h1>JavaScript Const</h1>
+    <div>
+        <p>Переменные, определенные с помощью <code>const</code>, не могут быть повторно объявлены.
+        </p>
+        <p>Переменные, определенные с помощью <code>const</code>, не может быть переназначены.</p>
+        <p>Переменные, определенные с помощью <code>const</code>, имеют область действия блока.</p>
+    </div>
+    <h2>Не может быть переназначена</h2>
+    <p>Переменная <code>const</code> не может быть переназначена:</p>
+    <div>
+        <h3>Пример</h3>
+        <div><span style="color:black">
+<span style="color:mediumblue">const</span> PI = <span style="color:red">3.141592653589793</span>;<br>
+PI = <span style="color:red">3.14</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+                style="color:green">// Это приведет к ошибке<br></span>
+PI = PI + <span style="color:red">10</span>;&nbsp;&nbsp; <span
+                style="color:green">// Это также приведет к ошибке
+ </span></span></div>
+        <hr>
+        <h2>Должена быть переназначена</h2>
+        <p>JavaScript переменной <code>const</code>, должно быть присвоено значение при их
+            объявлении:
+        </p>
+        <div>
+            <h3>Правильно</h3>
+            <div><span style="color:black">
+<span style="color:mediumblue">const</span> PI = <span style="color:red">3.14159265359</span>;<br><span
+                    style="color:red">
+</span> </span></div>
+        </div>
+        <div>
+            <h3>Неравильно</h3>
+            <div><span style="color:black">
+<span style="color:mediumblue">const</span> PI;<br>
+PI = <span style="color:red">3.14159265359</span>;<br><span
+                    style="color:red">
+</span> </span></div>
+        </div>
+        <div>
+            <h2>Когда использовать JavaScript const?</h2>
+            <p>Как правило, всегда объявляйте переменную с <code>const</code>, если вы не знаете,
+                что
+                значение изменится.</p>
+            <p>Используйте <code>const</code> при объявлении:</p>
+            <ul>
+                <li>Новый массив</li>
+                <li>Новый объект</li>
+                <li>Новая функция</li>
+                <li>Новое регулярное выражение</li>
+            </ul>
+        </div>
+        <hr>
+        <h2>Постоянные объекты и массивы</h2>
+        <p>Ключевое слово <code>const</code> немного вводит в заблуждение.</p>
+        <p>Она не определяет постоянное значение. Она определяет постоянную ссылку на значение.</p>
+        <p>Из-за этого вы НЕ можете:</p>
+        <ul>
+            <li>Переназначить постоянное значение</li>
+            <li>Переназначить массив констант</li>
+            <li>Переназначить постоянный объект</li>
+        </ul>
+        <ul>
+            Но вы МОЖЕТЕ:
+            <li>Измените элементы массива констант</li>
+            <li>Изменение свойств постоянного объекта</li>
+        </ul>
+        <hr>
+        <h2>Массивы констант</h2>
+        <p>Вы можете изменить элементы массива констант:</p>
+        <div>
+            <h3>Пример</h3>
+            <div><span style="color:black"><span
+
+                    style="color:red">
+</span><span style="color:green">// Вы можете создать постоянный массив:<br></span>
+<span style="color:mediumblue">const</span> cars = [<span
+                        style="color:brown">"Сааб"</span>, <span
+                        style="color:brown">"Вольво"</span>, <span
+                        style="color:brown">"БМВ"</span>];<br><br><span
+                        style="color:red">
+</span><span style="color:green">// Вы можете изменить элемент:<br></span>
+cars[<span style="color:red">0</span>] = <span
+                        style="color:brown">"Тойота"</span>;<br><br><span
+                        style="color:red">
+</span><span style="color:green">// Вы можете добавить элемент:<br></span>
+cars.<span style="color:black">push</span>(<span style="color:brown">"Ауди"</span>);<br><span
+                        style="color:red">
+</span> </span></div>
+        </div>
+        <p>Но вы НЕ можете переназначить массив:</p>
+        <div>
+            <h3>Пример</h3>
+            <div><span style="color:black">
+<span style="color:mediumblue">const</span> cars = [<span
+                    style="color:brown">"Сааб"</span>, <span
+                    style="color:brown">"Вольво"</span>, <span
+                    style="color:brown">"БМВ"</span>];<br><span
+                    style="color:red">
+</span><br>
+cars = [<span style="color:brown">"Тойота"</span>, <span
+                    style="color:brown">"Вольво"</span>, <span
+                    style="color:brown">"Ауди"</span>];&nbsp;&nbsp;&nbsp; <span
+
+                    style="color:green">// ОШИБКА
+ </span></span></div>
+        </div>
+        <hr>
+        <h2>Объекты констант</h2>
+        <p>Вы можете изменить свойства объекта констант:</p>
+        <div>
+            <h3>Пример</h3>
+            <div><span style="color:black"><span
+
+                    style="color:red">
+</span><span style="color:green">// Вы можете создать объект const:<br></span>
+<span style="color:mediumblue">const</span> car = {type:<span
+                        style="color:brown">"Фиат"</span>, model:<span
+                        style="color:brown">"500"</span>, color:<span
+                        style="color:brown">"белый"</span>};<br><br><span
+                        style="color:red">
+</span><span style="color:green">// Вы можете изменить свойство:<br></span>
+car.<span style="color:black">color</span> = <span style="color:brown">"красный"</span>;<br><br><span
+                        style="color:red">
+</span><span style="color:green">// Вы можете добавить свойство:<br></span>
+car.<span style="color:black">owner</span> = <span style="color:brown">"Щипунов"</span>; </span>
+            </div>
+        </div>
+        <p>Но вы НЕ можете переназначить объект:</p>
+        <div>
+            <h3>Пример</h3>
+            <div><span style="color:black">
+<span style="color:mediumblue">const</span> car = {type:<span
+                    style="color:brown">"Фиат"</span>, model:<span
+                    style="color:brown">"500"</span>, color:<span
+                    style="color:brown">"белый"</span>};<br><span
+                    style="color:red">
+</span><br>
+car = {type:<span style="color:brown">"Вольво"</span>, model:<span
+                    style="color:brown">"EX60"</span>, color:<span
+                    style="color:brown">"красный"</span>};&nbsp;&nbsp;&nbsp; <span
+                    style="color:green">// ОШИБКА </span></span></div>
+        </div>
+        <hr>
+        <h2>Поддержка браузера</h2>
+        <p>Ключевое слово <code>const</code> не поддерживается в Internet Explorer 10 или более
+            ранних
+            версиях.</p>
+        <p>В следующей таблице определены первые версии браузера с полной поддержкой ключевого слова <code
+        >const</code>:</p>
+        <div>
+            <table>
+                <tbody>
+                <tr style="height:50px;">
+                    <th style="width:20%;" title="Chrome"></th>
+                    <th style="width:20%;" title="Edge"></th>
+                    <th style="width:20%;" title="Firefox"></th>
+                    <th style="width:20%;" title="Safari"></th>
+                    <th style="width:20%;" title="Opera"></th>
+                </tr>
+                <tr>
+                    <td>Chrome 49</td>
+                    <td>IE 11 / Edge</td>
+                    <td>Firefox 36</td>
+                    <td>Safari 10</td>
+                    <td>Opera 36</td>
+                </tr>
+                <tr>
+                    <td>Mar, 2016</td>
+                    <td>Oct, 2013</td>
+                    <td>Feb, 2015</td>
+                    <td>Sep, 2016</td>
+                    <td>Mar, 2016</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <hr>
+        <h2>Область действия блока</h2>
+        <p>Объявление переменной с <code>const</code> аналогично <code
+        >let</code>,
+            когда дело доходит до <strong> области действия блока</strong>.</p>
+        <p>x, объявленный в блоке, в этом примере не совпадает с x, объявленным вне блока:</p>
+        <div>
+            <h3>Пример</h3>
+            <div><span style="color:black">
+<span style="color:mediumblue">const</span> x = <span
+                    style="color:red">10</span>;<br><span
+                    style="color:red">
+</span><span style="color:green">// Здесь x равно 10<br></span><span
+                    style="color:red">
+</span><br><span style="color:red">
+</span>{ <br>
+<span style="color:mediumblue">const</span> x = <span
+                    style="color:red">2</span>;<br><span
+                    style="color:red">
+</span><span style="color:green">// Здесь x равно 2<br></span>}<br><span
+                    style="color:red">
+</span><br><span style="color:red">
+</span><span style="color:green">// Здесь x равно 10
+ </span></span></div>
+        </div>
+        <hr>
+        <h2>Повторное объявление</h2>
+        <p>Повторное объявление переменной JavaScript <code>var</code> допускается в любом месте
+            программы:</p>
+        <div>
+            <h3>Пример</h3>
+            <div><span style="color:black">
+<span style="color:mediumblue">var</span> x = <span
+                    style="color:red">2</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                    style="color:green">// Допустимо<br></span>
+<span style="color:mediumblue">var</span> x = <span
+                    style="color:red">3</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                    style="color:green">// Допустимо<br></span>
+x = <span style="color:red">4</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                    style="color:green">// Допустимо </span></span></div>
+        </div>
+        <p>Повторное объявление существующей <code>var</code> или <code
+        >let</code>
+            переменной <code>const</code>, в той же области не допускается:</p>
+        <div>
+            <h3>Пример</h3>
+            <div><span style="color:black">
+<span style="color:mediumblue">var</span> x = <span
+                    style="color:red">2</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                    style="color:green">// Допустимо<br></span>
+<span style="color:mediumblue">const</span> x = <span
+                    style="color:red">2</span>;&nbsp;&nbsp;&nbsp;<span
+                    style="color:green">// Недопустимо<br></span><span
+                    style="color:red">
+</span><br><span style="color:red">
+</span>{<br>
+<span style="color:mediumblue">let</span> x = <span
+                    style="color:red">2</span>;&nbsp; &nbsp;&nbsp; <span
+                    style="color:green">// Допустимо<br></span>
+<span style="color:mediumblue">const</span> x = <span
+                    style="color:red">2</span>;&nbsp;&nbsp;&nbsp;<span
+                    style="color:green">// Недопустимо<br></span>}<br><span
+                    style="color:red">
+</span><br><span style="color:red">
+</span>{<br>
+<span style="color:mediumblue">const</span> x = <span
+                    style="color:red">2</span>;&nbsp;&nbsp; <span
+                    style="color:green">// Допустимо<br></span>
+<span style="color:mediumblue">const</span> x = <span
+                    style="color:red">2</span>;&nbsp;&nbsp;&nbsp;<span
+                    style="color:green">// Недопустимо<br></span><span
+                    style="color:red">
+</span>}<span style="color:red">
+</span> </span></div>
+        </div>
+        <p>Переназначение существующей переменной <code>const</code>, в той же области не
+            допускается:
+        </p>
+        <div>
+            <h3>Пример</h3>
+            <div><span style="color:black">
+<span style="color:mediumblue">const</span> x = <span
+                    style="color:red">2</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                    style="color:green">// Допустимо<br></span>
+x = <span style="color:red">2</span>;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                    style="color:green">// Недопустимо<br></span>
+<span style="color:mediumblue">var</span> x = <span
+                    style="color:red">2</span>;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                    style="color:green">// Недопустимо<br></span>
+<span style="color:mediumblue">let</span> x = <span
+                    style="color:red">2</span>;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                    style="color:green">// Недопустимо<br></span>
+<span style="color:mediumblue">const</span> x = <span
+                    style="color:red">2</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                    style="color:green">// Недопустимо<br></span><span
+                    style="color:red">
+</span><br>{<br>&nbsp;
+<span style="color:mediumblue">const</span> x = <span
+                    style="color:red">2</span>;&nbsp;&nbsp; <span
+                    style="color:green">// Допустимо<br></span><span
+                    style="color:red">
+</span>&nbsp; x = <span style="color:red">2</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+                    style="color:red">
+</span><span style="color:green">// Недопустимо<br></span>&nbsp; <span
+                    style="color:mediumblue">var</span> x = <span
+                    style="color:red">2</span>;&nbsp;&nbsp;&nbsp;&nbsp; <span
+
+                    style="color:red">
+</span><span style="color:green">// Недопустимо<br></span>&nbsp; <span
+                    style="color:mediumblue">let</span> x = <span
+                    style="color:red">2</span>;&nbsp;&nbsp;&nbsp;&nbsp; <span
+
+                    style="color:red">
+</span><span style="color:green">// Недопустимо<br></span>&nbsp;<span
+                    style="color:mediumblue">const</span> x = <span
+                    style="color:red">2</span>;&nbsp;&nbsp;&nbsp; <span
+                    style="color:green">// Недопустимо<br></span><span
+                    style="color:red">
+</span>}<br><span style="color:red">
+</span> </span></div>
+        </div>
+        <p>Допускается повторное объявление переменной с <code>const</code>, в другой области или в
+            другом блоке:</p>
+        <div>
+            <h3>Пример</h3>
+            <div><span style="color:black">
+<span style="color:mediumblue">const</span> x = <span
+                    style="color:red">2</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                    style="color:green">// Допустимо<br></span><br>{<br>&nbsp;
+<span style="color:mediumblue">const</span> x = <span
+                    style="color:red">3</span>;&nbsp;&nbsp; <span
+                    style="color:green">// Допустимо<br></span><span
+                    style="color:red">
+</span>}<br><span style="color:red">
+</span><br><span style="color:red">
+</span>{<br><span style="color:red">
+</span>&nbsp;&nbsp;<span style="color:mediumblue">const</span> x = <span
+                    style="color:red">4</span>;&nbsp;&nbsp;&nbsp;<span
+                    style="color:green">// Допустимо<br></span><span
+                    style="color:red">
+</span>} </span></div>
+        </div>
+        <hr>
+        <h2>Подъем констант</h2>
+        <p>Переменные, определенные с помощью <code>var</code>, являются <strong>поднятые</strong>
+            сверху и могут быть инициализированы в любое время.</p>
+        <p>Смысл в том: Вы можете использовать переменную до ее объявления:</p>
+        <div>
+            <h3>Пример</h3>
+            <p>Это нормально:</p>
+            <div><span style="color:black">
+carName = <span style="color:brown">"Вольво"</span>;<br>
+<span style="color:mediumblue">var</span> carName;<span style="color:red">
+</span> </span></div>
+        </div>
+        <p>Переменные, определенные с помощью <code>const</code>, также поднимаются наверх, но не
+            инициализируются.</p>
+        <p>Смысл в том: Использование <code>const</code> до ее объявления приведет к <code
+        >ReferenceError</code>:</p>
+        <div>
+            <h3>Пример</h3>
+            <div><span style="color:black">
+alert (carName);<br>
+<span style="color:mediumblue">const</span> carName = <span
+                    style="color:brown">"Вольво"</span>;<span
+                    style="color:red">
+</span> </span></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

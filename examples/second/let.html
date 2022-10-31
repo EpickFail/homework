@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Let</title>
+    <script src="main.js"></script>
+</head>
+<body>
+<div id="header"></div>
+<div>
+    <h1>JavaScript Let</h1>
+    <div>
+        <p>Ключевое слово <code>let</code> было введено в ES6 (2015)</p>
+        <p>Переменные, определенные с помощью <code>let</code>, не могут быть повторно объявлены.
+        </p>
+        <p>Переменные, определенные с помощью <code>let</code>, должны быть объявлены перед
+            использованием.</p>
+        <p>Переменные, определенные с помощью <code>let</code>, иметь область действия блока.</p>
+    </div>
+    <h2>Не может быть повторно объявлена</h2>
+    <p>Переменные, определенные с помощью <code>let</code>, не могут быть <b>повторно объявлены</b>.
+    </p>
+    <p>Вы не можете случайно повторно объявить переменную.</p>
+    <p>С <code>let</code> вы не можете этого сделать:</p>
+    <div>
+        <h3>Пример</h3>
+        <div><span style="color:black">
+<span style="color:mediumblue">let</span> x = <span style="color:brown">"Андрей Щипунов"</span>;<br><span
+                style="color:red">
+</span><br>
+<span style="color:mediumblue">let</span> x = <span
+                style="color:red">0</span>;<br><br><span
+                style="color:red">
+</span><span style="color:green">// Синтаксическая ошибка: "x" уже объявлен<br></span><span
+                style="color:red">
+</span> </span></div>
+    </div>
+    <p>С помощью <code>var</code> вы можете:</p>
+    <div>
+        <h3>Пример</h3>
+        <div><span style="color:black">
+<span style="color:mediumblue">var</span> x = <span style="color:brown">"Андрей Щипунов"</span>;<br><span
+                style="color:red">
+</span><br>
+<span style="color:mediumblue">var</span> x = <span
+                style="color:red">0</span>;<span
+                style="color:red">
+</span> </span></div>
+    </div>
+    <hr>
+    <h2>Область действия блока</h2>
+    <p>До ES6 (2015) JavaScript имел только <b>Глобальную область действия</b> и <b>Область действия функций</b>.</p>
+    <p>В ES6 введены два важных новых ключевых слова JavaScript: <code>let</code> и <code
+    >const</code></p>
+    <p>Эти два ключевых слова обеспечивают <strong>Область действия блока</strong> в JavaScript.</p>
+    <p>Переменные, объявленные внутри блока {}, не могут быть доступны извне блока:</p>
+    <div>
+        <h3>Пример</h3>
+        <div><span style="color:black"><span
+                style="color:red">
+</span>{ <br><span style="color:red">
+</span>&nbsp;&nbsp;<span style="color:mediumblue">let</span> x = <span
+                style="color:red">2</span>;<br><span
+                style="color:red">
+</span>}<br><span style="color:red">
+</span><span style="color:green">// x НЕЛЬЗЯ использовать </span></span></div>
+    </div>
+    <p>Переменные, объявленные с помощью ключевое слово <code>var</code> не может иметь область
+        действия блока.</p>
+    <p>Переменные, объявленные внутри блока { }, могут быть доступны извне блока. </p>
+    <div>
+        <h3>Пример</h3>
+        <div><span style="color:black"><span
+                style="color:red">
+</span>{ <br><span style="color:red">
+</span>&nbsp;&nbsp;<span style="color:mediumblue">var</span> x = <span
+                style="color:red">2</span>; <br><span
+                style="color:red">
+</span>}<br><span style="color:red">
+</span><span style="color:green">// x МОЖНО использовать здесь </span></span></div>
+    </div>
+    <hr>
+    <h2>Повторное объявление переменных</h2>
+    <p>Повторное объявление переменной с использованием ключевого слова <code>var</code>, может
+        вызвать проблемы.</p>
+    <p>Повторное объявление переменной внутри блока, также приведет к повторному объявлению переменной вне блока:</p>
+    <div>
+        <h3>Пример</h3>
+        <div><span style="color:black">
+<span style="color:mediumblue">var</span> x = <span
+                style="color:red">10</span>;<br><span
+                style="color:red">
+</span><span style="color:green">// Здесь x равно 10<br></span><span
+                style="color:red">
+</span><br><span style="color:red">
+</span>{ <br>
+<span style="color:mediumblue">var</span> x = <span
+                style="color:red">2</span>;<br><span
+                style="color:red">
+</span><span style="color:green">// Здесь x равно 2<br></span>}<br><span
+                style="color:red">
+</span><br><span style="color:red">
+</span><span style="color:green">// Здесь x равно 2 </span></span></div>
+    </div>
+    <p>Повторное объявление переменной с использованием ключевого слова <code>let</code>, может
+        решить эту проблему.</p>
+    <p>Повторное объявление переменной внутри блока не приведет к повторному объявлению переменной вне блока:</p>
+    <div>
+        <h3>Пример</h3>
+        <div><span style="color:black">
+<span style="color:mediumblue">let</span> x = <span
+                style="color:red">10</span>;<br><span
+                style="color:red">
+</span><span style="color:green">// Здесь x равно 10<br></span><span
+                style="color:red">
+</span><br><span style="color:red">
+</span>{<br>
+<span style="color:mediumblue">let</span> x = <span
+                style="color:red">2</span>;<br><span
+                style="color:red">
+</span><span style="color:green">// Здесь x равно 2<br></span>}<br><span
+                style="color:red">
+</span><br><span style="color:red">
+</span><span style="color:green">// Здесь x равно 10
+ </span></span></div>
+    </div>
+    <hr>
+    <h2>Поддержка браузера</h2>
+    <p>Ключевое слово <code>let</code> не полностью поддерживается в Internet Explorer 11 и в более
+        ранних версиях.</p>
+    <p>В следующей таблице определены первые версии браузера с полной поддержкой ключевое слово <code
+    >let</code>:</p>
+    <p></p>
+    <div>
+        <table>
+            <tbody>
+            <tr>
+                <th style="width:20%;" title="Chrome"></th>
+                <th style="width:20%;" title="Edge"></th>
+                <th style="width:20%;" title="Firefox"></th>
+                <th style="width:20%;" title="Safari"></th>
+                <th style="width:20%;" title="Opera"></th>
+            </tr>
+            <tr>
+                <td>Chrome 49</td>
+                <td>Edge 12</td>
+                <td>Firefox 44</td>
+                <td>Safari 11</td>
+                <td>Opera 36</td>
+            </tr>
+            <tr>
+                <td>Mar, 2016</td>
+                <td>Jul, 2015</td>
+                <td>Jan, 2015</td>
+                <td>Sep, 2017</td>
+                <td>Mar, 2016</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2>Повторное объявление</h2>
+    <p>Повторное объявление переменной JavaScript с <code>var</code>, допускается в любом месте
+        программы:</p>
+    <div>
+        <h3>Пример</h3>
+        <div><span style="color:black">
+<span style="color:mediumblue">var</span> x = <span
+                style="color:red">2</span>;<br><span
+                style="color:red">
+</span><span style="color:green">// Здесь x равно 2<br></span><span
+                style="color:red">
+</span><br>
+<span style="color:mediumblue">var</span> x = <span
+                style="color:red">3</span>;<br><span
+                style="color:red">
+</span><span style="color:green">// Здесь x равно 3
+ </span></span></div>
+    </div>
+    <p>С <code>let</code>. повторное объявление переменной в том же блоке НЕ допускается:</p>
+    <div>
+        <h3>Пример</h3>
+        <div><span style="color:black">
+<span style="color:mediumblue">var</span> x = <span
+                style="color:red">2</span>;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color:green">// Допускается<br></span>
+<span style="color:mediumblue">let</span> x = <span
+                style="color:red">3</span>;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color:green">// Не допускается<br></span><span
+                style="color:red">
+</span><br><span style="color:red">
+</span>{<br>
+<span style="color:mediumblue">let</span> x = <span
+                style="color:red">2</span>;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color:green">// Допускается<br></span>
+<span style="color:mediumblue">let</span> x = <span
+                style="color:red">3</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color:green">// Не допускается<br></span><span
+                style="color:red">
+</span>}<br><span style="color:red">
+</span><br><span style="color:red">
+</span>{<br>
+<span style="color:mediumblue">let</span> x = <span
+                style="color:red">2</span>;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color:green">// Допускается<br></span>
+<span style="color:mediumblue">var</span> x = <span
+                style="color:red">3</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color:green">// Не допускается<br></span><span
+                style="color:red">
+</span>}<br><span style="color:red">
+</span> </span></div>
+    </div>
+    <p>Повторное объявление переменной с <code>let</code>, в другом блоке, допускается:</p>
+    <p></p>
+    <div>
+        <h3>Пример</h3>
+        <div><span style="color:black">
+<span style="color:mediumblue">let</span> x = <span
+                style="color:red">2</span>;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color:green">// Допускается<br></span><br>{<br>
+<span style="color:mediumblue">let</span> x = <span
+                style="color:red">3</span>;&nbsp;&nbsp;&nbsp; <span
+                style="color:green">// Допускается<br></span><span
+                style="color:red">
+</span>}<br><span style="color:red">
+</span><br><span style="color:red">
+</span>{<br>
+<span style="color:mediumblue">let</span> x = <span
+                style="color:red">4</span>;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                style="color:green">// Допускается<br></span><span
+                style="color:red">
+</span>} </span></div>
+
+    </div>
+    <hr>
+    <h2>Подъемный Let</h2>
+    <p>Переменные, определенные с помощью <code>var</code>, являются <strong>подъемными</strong>
+        сверху и могут быть инициализированы в любое время.</p>
+    <p>Смысл в том: Вы можете использовать переменную до ее объявления:</p>
+    <div>
+        <h3>Пример</h3>
+        <p>Это нормально:</p>
+        <div><span style="color:black">
+carName = <span style="color:brown">"Вольво"</span>;<br>
+<span style="color:mediumblue">var</span> carName;<span style="color:red">
+</span> </span></div>
+
+    </div>
+    <p>Переменные, определенные с помощью <code>let</code>, позволяют, также поднимаются в верхнюю
+        часть блока, но не инициализируются.</p>
+    <p>Смысл в том: Использование <code>let</code> до ее объявления приведет к <code
+    >ReferenceError</code>:</p>
+    <div>
+        <h3>Пример</h3>
+        <div><span style="color:black">
+carName = <span style="color:brown">"Сааб"</span>;<br>
+<span style="color:mediumblue">let</span> carName = <span
+                style="color:brown">"Вольво"</span>; </span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
