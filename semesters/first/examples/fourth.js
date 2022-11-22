@@ -135,7 +135,7 @@ let countLucky = 0;
 let i = 0;
 while (countLucky < 5) {
   if (numberIsLucky(i)) {
-    console.log(i);
+    console.log(i, 'isLucky');
     countLucky++;
   }
   i++;
