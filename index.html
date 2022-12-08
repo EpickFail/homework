@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Homework</title>
-    <!--<script src="semesters/first/examples/fifth.js"></script>-->
 </head>
 <body>
 <button id="first" onclick="loadExample()">Первое задание</button>
@@ -11,22 +10,20 @@
 <button id="third" onclick="loadExample()">Третье задание</button>
 <button id="fourth" onclick="loadExample()">Четвертое задание</button>
 <button id="fifth" onclick="loadExample()">Пятое задание</button>
+<button id="sixth" onclick="loadExample()">Шестое задание - мат. функции</button>
 <script>
   function loadExample() {
-    console.log(event.target.id)
     const example = event.target.id;
 
     const request = new XMLHttpRequest();
     request.open('GET', `./semesters/first/examples/${example}.js`, true);
 
     request.onload = function() {
-        console.log(request)
       eval(request.responseText)
     }
 
     request.send();
   }
-  //document.getElementById()
 </script>
 <style>
     button {
