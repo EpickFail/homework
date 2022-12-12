@@ -11,12 +11,19 @@
 <button id="fourth" onclick="loadExample()">Четвертое задание</button>
 <button id="fifth" onclick="loadExample()">Пятое задание</button>
 <button id="sixth" onclick="loadExample()">Шестое задание - мат. функции</button>
+<button id="exam" onclick="loadExample('exam')">Экзамен</button>
 <script>
-  function loadExample() {
-    const example = event.target.id;
+  function loadExample(type) {
+    let url;
+    if (type) {
+      url = `./semesters/first/${type}.js`;
+    } else {
+      const example = event.target.id;
+      url = `./semesters/first/examples/${example}.js`;
+    }
 
     const request = new XMLHttpRequest();
-    request.open('GET', `./semesters/first/examples/${example}.js`, true);
+    request.open('GET', url, true);
 
     request.onload = function() {
       eval(request.responseText)
