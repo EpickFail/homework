@@ -3,23 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <title>Homework</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-<button id="first" onclick="loadExample()">Первое задание</button>
-<a id="second" href="./semesters/first/examples/second/header.html">Второе задание</a>
-<button id="third" onclick="loadExample()">Третье задание</button>
-<button id="fourth" onclick="loadExample()">Четвертое задание</button>
-<button id="fifth" onclick="loadExample()">Пятое задание</button>
-<button id="sixth" onclick="loadExample()">Шестое задание - мат. функции</button>
-<button id="exam" onclick="loadExample('exam')">Экзамен</button>
+<table class="table table-dark">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Second</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">1</th>
+        <td>
+            <button type="button" class="btn" id="first" onclick="loadExample('first')">Первое задание</button>
+        </td>
+        <td><button type="button" class="btn" id="first" onclick="loadExample('second')">Первое задание</button></td>
+    </tr>
+    <tr>
+        <th scope="row">2</th>
+        <td>
+            <a id="second" href="./semesters/first/examples/second/header.html">Второе задание</a>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <th scope="row">3</th>
+        <td>
+            <button type="button" class="btn" id="third" onclick="loadExample('first')">Третье задание</button>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <th scope="row">4</th>
+        <td>
+            <button type="button" class="btn" id="fourth" onclick="loadExample('first')">Четвертое задание</button>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <th scope="row">5</th>
+        <td>
+            <button type="button" class="btn" id="fifth" onclick="loadExample('first')">Пятое задание</button>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <th scope="row">6</th>
+        <td>
+            <button type="button" class="btn" id="sixth" onclick="loadExample('first')">Шестое задание - мат. функции</button>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <th scope="row">7</th>
+        <td>
+            <button type="button" class="btn" id="exam" onclick="loadExample('first', 'exam')">Экзамен</button>
+        </td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
 <script>
-  function loadExample(type) {
+  function loadExample(semester, type) {
     let url;
     if (type) {
-      url = `./semesters/first/${type}.js`;
+      url = `./semesters/${semester}/${type}.js`;
     } else {
       const example = event.target.id;
-      url = `./semesters/first/examples/${example}.js`;
+      url = `./semesters/${semester}/examples/${example}.js`;
     }
 
     const request = new XMLHttpRequest();
